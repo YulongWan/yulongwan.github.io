@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+  <head>
+    <title>My V Card</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii"
+    />
+    <style type="text/css">
+      /*<![CDATA[*/
+      body {
+        background-image: url(style/images/bg/dark_scratch.jpg);
+        background-repeat:repeat;
+        background-color:#ccc;
+        background-position:top center;
+        font: 12px/20px'DroidSansRegular', Arial, sans-serif;
+        color:#666;
+        margin:30px auto;
+        text-align:center;
+      }
+      .shadow {
+        background-image: url(style/images/shadow.png);
+        background-repeat: no-repeat;
+        background-position: -17px -28px;
+        margin: 0px auto;
+        padding: 0;
+        text-align: center;
+        display: block;
+      }
+      /*]]>*/
+    </style>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="stylesheet" href="style/css/nivo-slider.css" type="text/css"
+    media="screen" />
+    <link rel="stylesheet" href="style/css/prettyPhoto.css" type="text/css"
+    media="screen" charset="utf-8" />
+    <script type="text/javascript" src="style/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="style/js/jqueryui-1.8.18.min.js"></script>
+    <script type="text/javascript" src="style/js/jquery.quovolver.js"></script>
+    <script type="text/javascript" src="style/js/custom.js"></script>
+    <script type="text/javascript" src="style/js/jquery.coda-slider-3.0.js"></script>
+    <script type="text/javascript" src="contact/ajax.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1>John Doe</h1>
+      <div class="title">Web Designer &amp; Illustrator</div>
+      <div style="height: 500px; width: 980px;"
+      class="shadow">
+        <div id="one" class="accordion">
+          <ol>
+            <!-- ABOUT PAGE STARTS -->
+            <li>
+              <h2>
+                <span>About</span>
+              </h2>
+              <div>
+                <div class="figure">
+                  <h3>Welcome</h3>
+                  <div class="intro">Emi Phasellus congue auctor risuspon, eget males. Pellentes que un imperdiet,
+                    odio quis orn sollicitud. Sed vitae lectus elementum mauris semper pharetra
+                    vitae a urna. Dolor sit amet sem.</div>
+                  <div class="content-left">
+                    <!-- SLIDER GALLERY - ADD YOUR PHOTOS HERE -->
+                    <div id="sliderbg">
+                      <div id="slider-wrapper">
+                        <div id="slider" class="nivoSlider">
+                          <img src="style/images/slider1.jpg" alt="" />
+                          <img src="style/images/slider2.jpg" alt="" />
+                          <img src="style/images/slider3.jpg" alt="" />
+                        </div>
+                        <script type="text/javascript" src="style/js/jquery.nivo.slider.js">
+                          
+                        </script>
+                        <script type="text/javascript">
+                          //<![CDATA[
+                          $(window).load(function () {
+                            $('#slider').nivoSlider();
+                          });
+                          //]]>
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-right">
+                    <h4>Sed Vitae Lectus</h4>
+                    <p>Dolor sit amet sem commodo auguer uma porttitor interdum. Crasater om
+                      dolor neque, at rutrum turpikory aenean adipiscing dui velore quamery dictum
+                      condimentumy. Emi Phasellus congue auctor risuspon, eget males. Pellentes
+                      que un imperdiet, odio quis ornare sollicitudin. Sed vitae lectus elementum
+                      mauris semper pharetra vitae a urna.</p>
+                    <p>Dolor sit amet sem commodo auguer uma porttitor interdum. Crasater om
+                      dolor neque, at rutrum.
+                      <br />
+                      <img src="style/images/bullet.png" alt="" height="9" width="12" />
+                      <a href="#" title="This Is a Tool Tip" class="link">visit site</a>&raquo;</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- ABOUT PAGE ENDS -->
+            <!-- RESUME PAGE STARTS -->
+            <li>
+              <h2>
+                <span>Resume</span>
+              </h2>
+              <div>
+                <div class="figure">
+                  <h3>My Resume</h3>
+                  <div class="intro">Emi Phasellus congue auctor risuspon, eget males. Pellentes que un imperdiet,
+                    odio quis orn sollicitud. Sed vitae lectus elementum mauris semper pharetra
+                    vitae a urna. Dolor sit amet sem.</div>
+                  <!-- TECHNICAL SKILLS PAGE STARTS
+                  -->
+                  <div class="coda-slider-wrapper">
+                    <div class="coda-slider preload" id="coda-slider-1">
+                      <div class="panel">
+                        <div class="panel-wrapper">
+                          <h2 class="title">skills</h2>
+                          <div class="skills_left_text">
+                            <h4>Technical Skills</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus
+                              nulla, commodo.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus
+                              nulla, commodo.</p>
+                            <p>
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Morbi vel enim dignissim massa dignissim.
+                              <br />
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Commodo vitae quis tellus.
+                              <br />
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Nunc non mollis nulla adipiscing elit.</p>
+                          </div>
+                          <div class="skills_right_text">
+                            <span class="skill">Html/Css</span>
+                            <img src="style/images/5star.png" alt="" class="star" width="94"
+                            height="20" />
+                            <div class="divider"></div>12 years - Porttitor interdum.
+                            <div class="clear"></div>
+                            <span class="skill">Graphic Design</span>
+                            <img src="style/images/4star.png" alt="" class="star"
+                            width="94" height="20" />
+                            <div class="divider"></div>12 years - Crasater om dolor neque.
+                            <div class="clear"></div>
+                            <span class="skill">Photoshop</span>
+                            <img src="style/images/5star.png" alt="" class="star"
+                            width="94" height="20" />
+                            <div class="divider"></div>12 years - Porttitor interdum.</div>
+                        </div>
+                      </div>
+                      <!-- TECHNICAL SKILLS PAGE ENDS -->
+                      <!-- PAGE 2 STARTS -->
+                      <div class="panel">
+                        <div class="panel-wrapper">
+                          <h2 class="title">Panel 2</h2>
+                          <div class="skills_left_text">
+                            <h4>Education</h4>
+                            <p>Cing dui velore quamery dictum condimentumy. Lorem ipsum dolor sit amet,
+                              consectetur adipisc. Cing dui velore quamery dictum. Emi Phasellus congue
+                              auctor risuspon eget males.</p>
+                            <h5>Central St. Martins - London, U.K</h5>First Class B.A Honours in Graphic
+                            Design.
+                            <h5>LCP - London, U.K</h5>First Class B.A Honours in Graphic Design.</div>
+                          <div
+                          class="skills_right_text">
+                            <h4>Awards</h4>
+                            <img src="style/images/bullet.png" alt="" width="12" height="9"
+                            />D&amp;AD - Best in creative art direction - 2011
+                            <br />
+                            <img src="style/images/bullet.png" alt="" width="12" height="9" />Top Prize - Design &amp; Art Direction - 2011
+                            <br />
+                            <img src="style/images/bullet.png" alt="" width="12" height="9" />Best Award Ever - Creativity, design - 2010
+                            <div class="clear"></div>
+                            <h4>Published</h4>
+                            <p>
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Computer Arts Magazine - Feb. 2011
+                              <br />
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Vintage by Angela Patchell - 2010
+                              <br />
+                              <img src="style/images/bullet.png" alt="" width="12" height="9" />Computer Arts Magazine - June 2009</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- PAGE 2 ENDS -->
+                    <!-- PAGE 3 STARTS -->
+                    <div class="panel">
+                      <div class="panel-wrapper">
+                        <h2 class="title">Panel 3</h2>
+                        <div class="skills_left_text">
+                          <h4>Clients</h4>
+                          <h5>Web Design</h5>
+                          <img src="style/images/bullet.png" alt="" height="9" width="12"
+                          />Emi Phasellus Congue Auctor -
+                          <a href="#">visit site &raquo;</a>
+                          <br />
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Praesent Facilisis Diam Nec -
+                          <a href="#.html">visit site &raquo;</a>
+                          <br />
+                          <img src="style/images/bullet.png" alt="" width="12" height="9" />Praesent Facilisis Diam Nec -
+                          <a href="#">visit site &raquo;</a>
+                          <br />
+                          <h5>Illustration</h5>
+                          <img src="style/images/bullet.png" alt="" height="9"
+                          width="12" />Praesent Facilisis Diam Nec -
+                          <a href="#">visit site &raquo;</a>
+                          <br />
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Nunc Non Mollis Nulla -
+                          <a href="#">visit site &raquo;</a>
+                          <br />
+                          <h5>Graphic Design</h5>
+                          <img src="style/images/bullet.png" alt="" height="9"
+                          width="12" />Emi Phasellus Congue -
+                          <a href="#">visit site &raquo;</a>
+                          <br />
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Facilisis Diam Nec -
+                          <a href="#.html">visit site
+                                 &raquo;</a>
+                        </div>
+                        <div class="skills_right_text">
+                          <h4>Services</h4>
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Web Design
+                          <br />
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Web Hosting &amp; Domain Registration
+                          <br />
+                          <img src="style/images/bullet.png" alt="" height="9" width="12" />Graphics &amp; Illustration
+                          <br />
+                          <br />
+                          <!-- YOUR TESTIMONIALS -->
+                          <h4>Testimonials</h4>
+                          <script type="text/javascript">
+                            $(document).ready(function () {
+								$('blockquote').quovolver();
+							});
+                          </script>
+                          <blockquote>
+                            <p>" Ut eu consectetur nisi. Praesent facilisis diam nec sapien gravida non
+                              mattis justo imperdiet. Vestibulum nisl urna, euismod sit amet congue at,
+                              bibendum non risus. "
+                              <br />
+                              <cite>Quote Author</cite>
+                            </p>
+                          </blockquote>
+                          <blockquote>
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu
+                              eros velit, non blandit ipsum. Donec pretium, nibh vitae tristique tempor,
+                              enim sem condimentum lacus, vel mattis mauris. "
+                              <br />
+                              <cite>Quote Author</cite>
+                            </p>
+                          </blockquote>
+                          <!-- PAGE 3 ENDS -->
+                        </div>
+                      </div>
+                      <!-- .coda-slider -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </li>
+        <!-- RESUME PAGE ENDS -->
+        <!-- GALLERY PAGE STARTS -->
+        <li>
+          <h2>
+            <span>Portfolio</span>
+          </h2>
+          <div>
+            <div class="figure">
+              <h3>Gallery</h3>
+              <div class="intro">Emi Phasellus congue auctor risuspon, eget males. Pellentes que un imperdiet,
+                odio quis orn sollicitud. Sed vitae lectus elementum mauris semper pharetra
+                vitae a urna. Dolor sit amet sem.</div>
+              <!-- THUMBNAILS PAGE STARTS -->
+              <div class="coda-slider-wrapper">
+                <div class="coda-slider preload" id="coda-slider-2">
+                  <div class="panel">
+                    <div class="panel-wrapper">
+                      <h2 class="title">thumbs</h2>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gallast">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gal">
+                        <a href="images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                      <div class="gallast">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/thumb.jpg"
+                                 class="gal2"
+                                 width="60"
+                                 height="60"
+                                 alt="" /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- THUMBNAIL PAGE ENDS -->
+                  <!-- PAGE 2 STARTS -->
+                  <div class="panel">
+                    <div class="panel-wrapper">
+                      <h2 class="title">single</h2>
+                      <div class="left">
+                        <a href="style/images/large.jpg" rel="prettyPhoto"><img src="style/images/gallery.jpg"
+                                 alt=""
+                                 width="274"
+                                 height="165"
+                                 class="pic" /></a>
+                      </div>
+                      <div class="right_text">
+                        <h4>Featured Project</h4>
+                        <p>Cras luctus fringilla odio vel hendrerit. Cras pulvinar auctor sollicitudin.
+                          Sed lacus quam, sodales sit amet feugiat sit amet, viverra nec augue. Sed
+                          enim ipsum, malesuada quis blandit vel, posuere eget erat. Sed a arcu justo.</p>
+                        <img
+                        src="style/images/bullet.png" alt="" width="12" height="9" />
+                        <a href="#" class="link">visit site</a>&raquo;</div>
+                    </div>
+                  </div>
+                  <!-- PAGE 2 ENDS -->
+                  <!-- PAGE 3 STARTS -->
+                  <div class="panel">
+                    <div class="panel-wrapper">
+                      <h2 class="title">double</h2>
+                      <div class="left">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/gallery.jpg"
+                                 alt=""
+                                 width="274"
+                                 height="165"
+                                 class="pic" /></a>
+                      </div>
+                      <div class="right">
+                        <a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"><img src="style/images/gallery.jpg"
+                                 alt=""
+                                 width="274"
+                                 height="165"
+                                 class="pic" /></a>
+                      </div>
+                    </div>
+                    <!-- PAGE 3 ENDS -->
+                    <!-- .coda-slider -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- GALLERY ENDS -->
+        <!-- SOCIAL PAGE STARTS -->
+        <li>
+          <h2>
+            <span>Social</span>
+          </h2>
+          <div>
+            <div class="figure">
+              <h3>Social</h3>
+              <div class="intro">Emi Phasellus congue auctor risuspon, eget males. Pellentes que un imperdiet,
+                odio quis orn sollicitud. Sed vitae lectus elementum mauris semper pharetra
+                vitae a urna. Dolor sit amet sem.</div>
+              <div class="social-content-left">
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/twitter-logo-square.png"
+                         title="I Tweet - www.twitter.com/username"
+                         alt="Twitter"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Twitter</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/facebook-logo-square.png"
+                         alt="Facebook"
+                         title="Fan Me - www.facebook.com/usernae"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Facebook</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/linkedin-logo-square2.png"
+                         alt="Linked In"
+                         title="Let's Link Up - www.linkedin.com/username"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Linked In</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/flickr-square.png"
+                         alt="Flickr"
+                         title="Flickr - www.flickr.com/username"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Flickr</a>
+                </span>
+              </div>
+              <div class="social-content-right">
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/deviantart-s.png"
+                         alt="DeviantArt"
+                         title="I'm a Deviant! - www.deviantart.com/username"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />DeviantArt</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/rss-cube.png"
+                         alt="RSS"
+                         title="Get My Feed - www.feedburner.com/username"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />My Feed</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/vimeo-s.png"
+                         alt="Vimeo"
+                         title="Watch My Videos - www.vimeo.com/username"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Vimeo</a>
+                </span>
+                <div class="social-clear"></div>
+                <span class="social">
+                  <a href="#" class="icon"><img src="style/images/social/skype-s.png"
+                         alt="Skype"
+                         title="Skype Me"
+                         class="icon"
+                         border="0"
+                         width="56"
+                         height="56" />Skype</a>
+                </span>
+              </div>
+              <div class="content-right">
+                <!-- TWITTER BOX -->
+                <div class="tweet"></div>
+                <!-- ADD YOUR TWITTER USERNAME BELOW INSTEAD OF MINE i.e REPLACE
+                - jo_phillips -->
+                <script type="text/javascript">
+                  $(document).ready(function () {
+                    $(".tweet").tweet({
+                      username: "jo_phillips",
+                      avatar_size: null,
+                      count: 2,
+                      loading_text: "loading tweets..."
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- SOCIAL PAGE ENDS -->
+        <!-- CONTACT PAGE STARTS -->
+        <li>
+          <h2>
+            <span>Contact</span>
+          </h2>
+          <div>
+            <div class="figure">
+              <h3>Contact</h3>
+              <div class="intro">Emi Phasellus congue auctor risuspon, eget males. Pellentes que un imperdiet,
+                odio quis orn sollicitud. Sed vitae lectus elementum mauris semper pharetra
+                vitae a urna. Dolor sit amet sem.</div>
+              <div class="content-left">
+                <!-- CONTACT FORM -->
+                <form method='post' action='contact/php/contact-send.php'>
+                  <p class="label">Name</p>
+                  <input id='form_name' type='text' name='name' />
+                  <p class="label">Email *</p>
+                  <input id='form_email' type='text' name='email' />
+                  <p class="label">Message *</p>
+                  <textarea id='form_message' rows='10' cols='10' name='message'></textarea>
+                  <input id='form_submit' type='submit' name='submit' value='Submit'
+                  />
+                  <input id="reset" type="reset" value="Reset Form" />
+                  <p class='hide' id='response'></p>
+                  <div class='hide'>
+                    <p class="label">Do not fill out this field</p>
+                    <input name='spam_check' type='text' value=''
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="content-right">
+                <!-- GOOGLE MAP -->
+                <div id="map"></div>
+                <!-- CONTACT ICONS -->
+                <img src="style/images/pencil.png" class="contact_icon" width="30" height="30"
+                alt="address" />
+                <span class="contact">21, High St, Colchester, Essex, BN7 5NX</span>
+                <br />
+                <img src="style/images/telephone.png" class="contact_icon" width="30"
+                height="30" alt="telephone" />
+                <span class="contact">0234 678905</span>
+                <br />
+                <img src="style/images/email.png" class="contact_icon" width="30" height="30"
+                alt="email" />
+                <span class="contact">
+                  <a href="#" class="link" title="Email Me">info@mysite.com</a>
+                </span>
+                <br />
+                <img src="style/images/home.png" class="contact_icon" width="30" height="30"
+                alt="home" />
+                <span class="contact">
+                  <a href="#" class="link" title="My Website">www.mysite.com</a>
+                </span>
+                <br />
+                <img src="style/images/vcard.png" class="contact_icon" width="30" height="30"
+                alt="vcard" />
+                <span class="contact">
+                  <a href="#" class="link" title="Add Me To Your Contacts">vCard</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- CONTACT PAGE ENDS -->
+        </li>
+        </ol>
+      </div>
+      <div align="center">
+        <div class="copyright">&copy; copyright
+          <script type="text/javascript">
+            //<![CDATA[
+            var d = new Date()
+             document.write(d.getFullYear())
+            //]]>
+          </script>: John Doe</div>
+      </div>
+    </div>
+    <!-- ACCORDIAN JS -->
+    <script type="text/javascript" charset="utf-8">
+      //<![CDATA[
+      $('#one').liteAccordion({
+        autoPlay: false,
+        containerWidth: 960,
+        pauseOnHover: false,
+        containerHeight: 420,
+        theme: 'grey',
+        rounded: true,
+        enumerateSlides: true
+      });
+      //]]>
+    </script>
+    <script type="text/javascript">
+      $().ready(function () {
+        $('#coda-slider-2').codaSlider();
+      });
+    </script>
+    <script type="text/javascript">
+      $().ready(function () {
+        $('#coda-slider-1').codaSlider({
+          dynamicTabs: false
+        });
+      });
+    </script>
+    <!-- GOOGLE MAP -->
+    <script type="text/javascript">
+      //<![CDATA[
+      $(function () {
+        $("#map").googleMap({
+          zoomLevel: 10,
+          center: ' England',
+          tooltip: 'false',
+          image: 'false'
+        }).load();
+      });
+      //]]>
+    </script>
+    <!-- ADD YOUR GOOGLE MAP API HERE -->
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ADD YOUR GOOGLE API KEY HERE"
+    type="text/javascript"></script>
+    </div>
+  </body>
+
+</html>
