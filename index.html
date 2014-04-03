@@ -4,29 +4,66 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
+    <!-- Basic Page Needs-->
+    <meta charset="utf-8">
+    <title>Yulong Wan | Homepage</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Basic Page Needs
-  ================================================== -->
-  <meta charset="utf-8">
-  <title>Yulong Wan | Homepage</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Mobile Specific Metas
-  ================================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS-->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 
-  <!-- CSS
-  ================================================== -->
-  <link rel="stylesheet" href="stylesheets/base.css">
-  <link rel="stylesheet" href="stylesheets/skeleton.css">
-  <link rel="stylesheet" href="stylesheets/layout.css">
-  <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="images/ringtones.ico">
 
-  <!-- Favicons
-  ================================================== -->
-  <link rel="shortcut icon" href="images/ringtones.ico">
-
+    <!-- Script -->
+    <script>
+        var initData = new Date();
+        var initTime = initData.getTime();
+        var endTime = initTime;
+        var timer = null;
+        function startShow()
+        {
+            endTime = endTime+1000;
+            var minStr;
+            var minNum = Math.floor(((endTime-initTime)/60000));
+            var secNum = Math.floor(((endTime-initTime)%60000)/1000);
+            if(minNum<10)
+            {
+                minStr = "0"+minNum;
+            }
+            else
+            {
+                minStr = minNum;
+            }
+            var secStr;
+            if(secNum<10)
+            {
+                secStr = "0"+secNum;
+            }
+            else
+            {
+                secStr = secNum;
+            }
+            document.getElementById("timeDemo").innerHTML= minStr+":"+secStr;
+            if(initTime>=endTime)
+            {
+                document.getElementById("timeDemo").innerHTML="Time Up!";
+                endShow();
+            }
+        }
+        function endShow()
+        {
+            window.clearTimeout(timer);
+        }
+        timer = window.setInterval("startShow()",1000);
+    </script>
 </head>
 <body>
 
@@ -40,6 +77,7 @@
           <a href="images/title.jpg" target="_blank"><img src="images/title.jpg" width="220" class="with_border"/></a>
           Yulong Wan
       </h3>
+
       <ul>
         <li><a href="index_cn.html">简体中文</a></li>
         <li><a href="#aboutme">About me</a></li>
@@ -49,6 +87,7 @@
         <li><a href="#patent">Patents</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li id="timeDemo"></li>
 <!--         <li><a href="#link">Links</a></li> -->
         <li>&nbsp;</li>
         <li><a href="http://www.linkedin.com/pub/yulong-wan/61/662/97a" target="_blank">LinkedIn Profile</a></li>
