@@ -5,27 +5,27 @@
       $(document).ready(function(){
       $("a[rel^='prettyPhoto']").prettyPhoto({deeplinking: false});
       });
-      
+
 /***************************************************
 		TIP TIP SETTINGS
 ***************************************************/
       $(function(){
       $(".icon , .link").tipTip({maxWidth: "auto", edgeOffset: 4, defaultPosition: "top" });
-      });  
+      });
 
 /***************************************************
 		GALLERY HOVER EFFECT
 ***************************************************/
    $(function(){
-      $('.gal2 img , .pic img').animate({"opacity": 1 }); 
+      $('.gal2 img , .pic img').animate({"opacity": 1 });
       $('.gal img , .gallast img , .left img , .right img').hover(function() {
       $(this).stop().animate({ "opacity": .6 });
-      },      
+      },
       function() {
       $(this).stop().animate({ "opacity": 1 });
       });
       });
-      
+
 /* ------------------------------------------------------------------------
 	Class: prettyPhoto
 	Use: Lightbox clone for jQuery
@@ -57,40 +57,40 @@ return this.unbind('click.prettyphoto').bind('click.prettyphoto',$.prettyPhoto.i
  * jQuery Quovolver v1.0 - http://sandbox.sebnitu.com/jquery/quovolver
  *
  * By Sebastian Nitu - Copyright 2009 - All rights reserved
- * 
+ *
  */
 
 (function($) {
 	$.fn.quovolver = function(speed, delay) {
-		
+
 		/* Sets default values */
 		if (!speed) speed = 500;
 		if (!delay) delay = 6000;
-		
-		// If "delay" is less than 4 times the "speed", it will break the effect 
+
+		// If "delay" is less than 4 times the "speed", it will break the effect
 		// If that's the case, make "delay" exactly 4 times "speed"
 		var quaSpd = (speed*4);
 		if (quaSpd > (delay)) delay = quaSpd;
-		
+
 		// Create the variables needed
 		var	quote = $(this),
 			firstQuo = $(this).filter(':first'),
 			lastQuo = $(this).filter(':last'),
 			wrapElem = '<div id="quote_wrap"></div>';
-		
+
 		// Wrap the quotes
 		$(this).wrapAll(wrapElem);
-		
+
 		// Hide all the quotes, then show the first
 		$(this).hide();
 		$(firstQuo).show();
-		
+
 		// Set the hight of the wrapper
-		$(this).parent().css({height: $(firstQuo).height()});		
-		
+		$(this).parent().css({height: $(firstQuo).height()});
+
 		// Where the magic happens
 		setInterval(function(){
-			
+
 			// Set required hight and element in variables for animation
 			if($(lastQuo).is(':visible')) {
 				var nextElem = $(firstQuo);
@@ -99,28 +99,28 @@ return this.unbind('click.prettyphoto').bind('click.prettyphoto',$.prettyPhoto.i
 				var nextElem = $(quote).filter(':visible').next();
 				var wrapHeight = $(nextElem).height();
 			}
-			
+
 			// Fadeout the quote that is currently visible
 			$(quote).filter(':visible').fadeOut(speed);
-			
+
 			// Set the wrapper to the hight of the next element, then fade that element in
 			setTimeout(function() {
 				$(quote).parent().animate({height: wrapHeight}, speed);
 			}, speed);
-			
+
 			if($(lastQuo).is(':visible')) {
 				setTimeout(function() {
 					$(firstQuo).fadeIn(speed*2);
 				}, speed*2);
-				
+
 			} else {
 				setTimeout(function() {
 					$(nextElem).fadeIn(speed);
 				}, speed*2);
 			}
-			
+
 		}, delay);
-	
+
 	};
 })(jQuery);
 
@@ -150,8 +150,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /////////////////////////////////////////////////////////////////////
 */
 (function($) {
-    
-    $.GoogleMapObjectDefaults = {        
+
+    $.GoogleMapObjectDefaults = {
         zoomLevel: 10,
 	imagewidth: 50,
 	imageheight: 50,
@@ -169,7 +169,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         this._inited = false;
         this._map = null;
         this._geocoder = null;
-	
+
         /* Public properties */
         this.ElementId = elementId;
         this.Settings = $.extend({}, $.GoogleMapObjectDefaults, options || '');
@@ -183,14 +183,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                     this._map.addControl(new GSmallMapControl());
                     this._geocoder = new GClientGeocoder();
                 }
-		
+
                 this._inited = true;
             }
         },
         load: function() {
             //ensure existence
             this.init();
-	    
+
             if (this._geocoder) {
                 //"this" will be in the wrong context for the callback
                 var zoom = this.Settings.zoomLevel;
@@ -198,23 +198,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		var width = this.Settings.imagewidth;
 		var height = this.Settings.imageheight;
                 var map = this._map;
-		
+
 		if (this.Settings.tooltip != 'false') {
 		    var customtooltip = true;
 		    var tooltipinfo = this.Settings.tooltip;
 		}
-		
+
 		if (this.Settings.image != 'false') {
 		    var customimage = true;
 		    var imageurl = this.Settings.image;
 		}
-		
+
                 this._geocoder.getLatLng(center, function(point) {
                     if (!point) { alert(center + " not found"); }
                     else {
                         //set center on the map
                         map.setCenter(point, zoom);
-			
+
 			if (customimage == true) {
 			    //add the marker
 			    var customiconsize = new GSize(width, height);
@@ -226,18 +226,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			    var marker = new GMarker(point);
 			    map.addOverlay(marker);
 			}
-			
+
 			if(customtooltip == true) {
 			    marker.openInfoWindowHtml(tooltipinfo);
 			}
                     }
                 });
             }
-	    
-	    
+
+
             //make this available to the click element
             $.data($(this.Settings.submit)[0], 'inst', this);
-	    
+
             $(this.Settings.submit).click(function(e) {
                 e.preventDefault();
                 var obj = $.data(this, 'inst');
@@ -247,11 +247,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		map.clearOverlays();
 		var gdir = new GDirections(map, document.getElementById(outputto));
 		gdir.load("from: " + from + " to: " + to);
-		
+
                 //open the google window
                 //window.open("http://maps.google.com/maps?saddr=" + from + "&daddr=" + to, "GoogleWin", "menubar=1,resizable=1,scrollbars=1,width=750,height=500,left=10,top=10");
             });
-	    
+
             return this;
         }
     });
@@ -263,7 +263,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             if (mapInst) {
                 return mapInst;
             }
-	    
+
             //create a new map instance
             mapInst = new GoogleMapObject($(this).attr('id'), options);
             $.data(this[0], 'googleMap', mapInst);
@@ -287,7 +287,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * browser tooltip. It is extremely lightweight and very smart in
  * that it detects the edges of the browser window and will make sure
  * the tooltip stays within the current window size. As a result the
- * tooltip will adjust itself to be displayed above, below, to the left 
+ * tooltip will adjust itself to be displayed above, below, to the left
  * or to the right depending on what is necessary to stay within the
  * browser window. It is completely customizable as well via CSS.
  *
@@ -314,47 +314,47 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*************************************************/
 
 (function($) {
-	
+
 	$.fn.liteAccordion = function(options) {
-				
+
 		// defaults
 		var defaults = {
 			containerWidth : 960,
 			containerHeight : 320,
 			headerWidth : 48,
-			
-			firstSlide : 1, 
+
+			firstSlide : 1,
 			onActivate : function() {},
 			slideSpeed : 800,
-			slideCallback : function() {},			
-			
+			slideCallback : function() {},
+
 			autoPlay : false,
-			pauseOnHover : false, 
+			pauseOnHover : false,
 			cycleSpeed : 6000,
 
 			theme : 'basic', // basic, light*, dark, stitch*
 			rounded : false,
 			enumerateSlides : false
 		},
-		
-		// merge defaults with options in new settings object				
+
+		// merge defaults with options in new settings object
 			settings = $.extend({}, defaults, options),
-	
+
 		// define key variables
 			$accordion = this,
 			$slides = $accordion.find('li'),
 			slideLen = $slides.length,
 			slideWidth = settings.containerWidth - (slideLen * settings.headerWidth),
 			$header = $slides.children('h2'),
-			
+
 		// core utility and animation methods
 			utils = {
-				getGroup : function(pos, index) {		
+				getGroup : function(pos, index) {
 					if (this.offsetLeft === pos.left) {
 						return $header.slice(index + 1, slideLen).filter(function() { return this.offsetLeft === $header.index(this) * settings.headerWidth });
 					} else if (this.offsetLeft === pos.right) {
-						return $header.slice(0, index + 1).filter(function() { return this.offsetLeft === slideWidth + ($header.index(this) * settings.headerWidth) });	
-					} 					
+						return $header.slice(0, index + 1).filter(function() { return this.offsetLeft === slideWidth + ($header.index(this) * settings.headerWidth) });
+					}
 				},
 				nextSlide : function(slideIndex) {
 					var slide = slideIndex + 1 || settings.firstSlide;
@@ -369,29 +369,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						start = function() {
 							$header.eq(getNext()).click();
 						};
-					
-					utils.playing = setInterval(start, settings.cycleSpeed);			
+
+					utils.playing = setInterval(start, settings.cycleSpeed);
 				},
 				pause : function() {
 					clearInterval(utils.playing);
 				},
 				playing : 0,
 				sentinel : false
-			};		
-		
+			};
+
 		// set container heights, widths, theme & corner style
 		$accordion
 			.height(settings.containerHeight)
 			.width(settings.containerWidth)
 			.addClass(settings.theme)
 			.addClass(settings.rounded && 'rounded');
-		
+
 		// set tab width, height and selected class
 		$header
 			.width(settings.containerHeight)
 			.height(settings.headerWidth)
 			.eq(settings.firstSlide - 1).addClass('selected');
-		
+
 		// ie :(
 		if ($.browser.msie) {
 			if ($.browser.version.substr(0,1) > 8) {
@@ -400,25 +400,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				return false;
 			}
 		}
-		
+
 		// set initial positions for each slide
 		$header.each(function(index) {
 			var $this = $(this),
 				left = index * settings.headerWidth;
-				
+
 			if (index >= settings.firstSlide) left += slideWidth;
-			
+
 			$this
 				.css('left', left)
 				.next()
 					.width(slideWidth)
 					.css({ left : left, paddingLeft : settings.headerWidth });
-			
-			// add number to bottom of tab
-			settings.enumerateSlides && $this.append('<b>' + (index + 1) + '</b>');			
 
-		});	
-				
+			// add number to bottom of tab
+			settings.enumerateSlides && $this.append('<b>' + (index + 1) + '</b>');
+
+		});
+
 		// bind event handler for activating slides
 		$header.click(function(e) {
 			var $this = $(this),
@@ -428,20 +428,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					left : index * settings.headerWidth,
 					right : index * settings.headerWidth + slideWidth,
 					newPos : 0
-				}, 
+				},
 				$group = utils.getGroup.call(this, pos, index);
-								
+
 			// set animation direction
 			if (this.offsetLeft === pos.left) {
 				pos.newPos = slideWidth;
 			} else if (this.offsetLeft === pos.right) {
 				pos.newPos = -slideWidth;
 			}
-			
+
 			// check if animation in progress
 			if (!$header.is(':animated')) {
 
-				// activate onclick callback with slide div as context		
+				// activate onclick callback with slide div as context
 				if (e.originalEvent) {
 					if (utils.sentinel === this) return false;
 					settings.onActivate.call($next);
@@ -453,17 +453,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 				// remove, then add selected class
 				$header.removeClass('selected').filter($this).addClass('selected');
-			
-				// get group of tabs & animate			
+
+				// get group of tabs & animate
 				$group
 					.animate({ left : '+=' + pos.newPos }, settings.slideSpeed, function() { settings.slideCallback.call($next) })
 					.next()
 					.animate({ left : '+=' + pos.newPos }, settings.slideSpeed);
-						
+
 			}
 		});
-			
-		// pause on hover			
+
+		// pause on hover
 		if (settings.pauseOnHover) {
 			$accordion.hover(function() {
 				utils.pause();
@@ -471,14 +471,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				utils.play($header.index($header.filter('.selected')));
 			});
 		}
-				
+
 		// start autoplay, call utils with no args = start from firstSlide
 		settings.autoPlay && utils.play();
-		
+
 		return $accordion;
-		
+
 	};
-	
+
 })(jQuery);
 
 /***************************************************
@@ -506,9 +506,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       auto_join_text_url: "i was looking at",   // [string]   auto tense for urls: "i was looking at" http:...
       loading_text: null,                       // [string]   optional loading text, displayed while tweets load
       refresh_interval: null ,                  // [integer]  optional number of seconds after which to reload tweets
-      twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
-      twitter_api_url: "api.twitter.com",       // [string]   custom twitter api url, if any (apigee, etc.)
-      twitter_search_url: "search.twitter.com", // [string]   custom twitter search url, if any (apigee, etc.)
+      // twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
+     // twitter_api_url: "api.twitter.com",       // [string]   custom twitter api url, if any (apigee, etc.)
+    // twitter_search_url: "search.twitter.com", // [string]   custom twitter search url, if any (apigee, etc.)
       template: "{avatar}{time}{join}{text}",   // [string or function] template used to construct each tweet <li> - see code for available vars
       comparator: function(tweet1, tweet2) {    // [function] comparator used to sort tweets (see Array.sort)
         return tweet2["tweet_time"] - tweet1["tweet_time"];
