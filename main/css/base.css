@@ -479,6 +479,21 @@ video {
 	margin:  0 auto 45px;
 }
 
+#logo #title {
+    width:   597px;
+    height:  78px;
+    font-family: BROADW;
+    font-size: 7.5em;
+    color: #595858;
+    transform:scale(1,0.90);
+    -webkit-transform:scale(1,0.90);
+    -moz-transform:scale(1,0.90);
+    -ms-transform:scale(1,0.90);
+    -o-transform:scale(1,0.90);
+    vertical-align: top;
+    /*margin-top: -50px;*/
+}
+
 .logo_trans_wht, .logo_trans_blk {
 	width:       275px;
 	height:      36px;
@@ -731,8 +746,8 @@ a.proj_link:active {
 /*--- Welcome Panel ---*/
 #welcome .container {
 	width:              100%;
-	height:             200px;
-	margin-top:         -100px;
+	height:             250px;
+	margin-top:       -150px;
 	color:              #909090;
 	text-align:         center;
 	-moz-box-shadow:    none;
@@ -750,6 +765,7 @@ a.proj_link:active {
 }
 
 #welcome .container .line {
+    margin-top:       100px;
 	font-size: 1.25em;
 }
 
