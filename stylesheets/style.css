@@ -20,6 +20,7 @@
   #logo {
     margin-bottom: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Microsoft YaHei,Verdana,sans-serif;
     letter-spacing: -1px;
     font-weight: bold; }
   nav ul {
@@ -95,10 +96,10 @@
   }
 
   ul.projects li{
-      font-weight: bold; 
+      font-weight: bold;
       font-size:18px;
   }
-  
+
   .resize {
     position: fixed;
     bottom: 0;
