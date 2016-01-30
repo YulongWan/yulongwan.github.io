@@ -22,6 +22,12 @@ data-seajs-base="http://static.zuiku.com/res/js/" id="webapp">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
+<meta content="1338" name="appId">
+<meta content="0" name="stat_open">
+<meta content="2" name="stat_source_click">
+<meta content="1" name="stat_source_share">
+<meta content="1" name="stat_source_pv">
+<meta content="1338" name="stat_source">
 <title>万玉龙&朱倩婚礼邀请函</title>
 <link rel="stylesheet" type="text/css" href="./res/css/lib/g.css">
 <link rel="stylesheet" type="text/css" href="./res/css/lib/animate.css">
@@ -306,7 +312,6 @@ if(percentNode){
 }
 
 ImageLoader.complete = (loaded >= size);
-ImageLoader.complete = true;
 },
 load: function(){
         var imgs = this.images;
@@ -369,8 +374,7 @@ var loader = ImageLoader.getImageLoader("progress");
 
 loader.notify("success");
 
-seajs.use(["logic/default/webapp"], function(app){
-
+seajs.use(["logic/default/webapp.1d49950f03ce56aaffe186807bde1b291c4cd6cd"], function(app){
     app.app.set("ready", {
 callback: function(success){
 this.appReady = true;
@@ -413,7 +417,7 @@ var layout = app.app.layout;
 var design = layout.design;
 var _scale = layout.scale;
 
-app.setAudio("./res/music/1.mp3", false);
+app.setAudio("./res/music/1.mp3", true);
 for(var i = 0; i < G_MASKLAYER_OPTIONS.length; i++){
 var maskOptions = G_MASKLAYER_OPTIONS[i];
 var id = "#masklayer_" + maskOptions.key;
