@@ -40,14 +40,14 @@ img{ -webkit-user-select:none;}
 /**********************************/
 .p1{z-index: 100; opacity: 1;}
 .p1 .bg{ background-image: url(../images/p1_bg.jpg); -webkit-transform: scale(1); transform: scale(1);}
-.p1 .t1{ left: 95px; top: 131px;}
+.p1 .t1{ left: 95px; top: 90px;}
 
 .p2 .bg{ background-image: url(../images/p2_bg.jpg);}
 .p2 .t1{ left: 37px; top: 20px;}
 .p2 .t2{ right: 37px; top: 20px;}
 
 .p3 .bg{ background-image: url(../images/p3_bg.jpg);}
-.p3 .t1{ left: 37px; top: 62px;}
+.p3 .t1{ left: 37px; top: 102px;}
 
 .p4 .bg{ background-image: url(../images/p4_bg.jpg);}
 .p4 .t1{ right: 67px; bottom: 91px;}
